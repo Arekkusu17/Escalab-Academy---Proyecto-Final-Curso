@@ -1,0 +1,257 @@
+/* ESTILOS GLOBALES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialised;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-weight: 400;
+	font-size: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #dbeaff;
+}
+
+header,
+section,
+main,
+nav,
+footer,
+article,
+figure,
+hgroup {
+	display: block;
+	width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+}
+
+.img-responsive {
+	max-width: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	transition: .2s all ease-in-out;
+}
+
+ul {
+	list-style: none;
+}
+
+/* HEADER (EN ESTE CASO, ES LA SECCION COMPLETA DE LA PÁGINA*/
+
+.header-home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #4c58e0;
+	margin: 6rem;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* POSICIONAMIENTO DEL LOGO*/
+.logo-container {
+	box-sizing: border-box;
+	background-color: #4c58e0;
+}
+.logotipo {
+	position: absolute;
+	width: 115px;
+	height: 130px;
+	top: 6rem;
+	left: 6rem;
+}
+
+.logotipo img {
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+/* SECCION COMPLETA PARA TABLET*/
+@media only screen and (max-width: 820px) {
+	.logotipo {
+		position: relative;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.logotipo img {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 240px;
+		height: 240px;
+	}
+	.logo-container {
+		box-sizing: border-box;
+		object-fit: contain;
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.header-home {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #4c58e0;
+		margin: 0;
+	}
+
+	.hero,
+	.container {
+		margin-top: -1rem;
+		overflow: hidden;
+	}
+}
+/*SECCION COMPLETA MOBILE*/
+@media only screen and (max-width: 425px) {
+	.hero,
+	.container {
+		margin-top: -1rem;
+		overflow: hidden;
+		flex-wrap: wrap;
+	}
+
+	.logo-container {
+		position: fixed;
+		height: 100px;
+		top: 0;
+		box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+	}
+
+	.main-menu {
+		display: block;
+		flex-direction: row;
+		position: fixed;
+		justify-content: center;
+		align-items: center;
+		bottom: 0;
+		left: 0;
+		background-color: #4e73df;
+		width: 100%;
+		box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, 0.1);
+		height: 60px;
+	}
+	.logotipo img {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 150px;
+		height: 150px;
+	}
+}
+
+/* CONTENIDO*/
+
+.hero {
+	min-width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 2rem 2rem;
+}
+
+hgroup:not(a) {
+	margin-top: 5rem;
+	display: block;
+	color: white;
+	text-align: left;
+}
+
+hgroup h1 {
+	font-size: 48px;
+}
+hgroup h3 {
+	font-weight: 200;
+	font-size: 24px;
+}
+hgroup a {
+	color: #4c58e0;
+}
+
+/*Boton*/
+
+.btn-hero {
+	transition: .2s all ease-in-out;
+	background-color: white;
+	line-height: 35px;
+	height: 35px;
+	padding: 0 .5rem;
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	max-width: fit-content;
+	color: #4c58e0;
+	font-weight: 700;
+	border-radius: 13px;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-hero:hover {
+	transform: scale(1.1);
+}
+
+/* Imagen*/
+.image-hero {
+	margin-top: 4rem;
+}
+
+/* NAVIGATION MENU*/
+.main-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+}
+
+.menu-link-desktop {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 2rem;
+}
+
+.link-menu {
+	padding-right: 30px;
+	line-height: 70px;
+	height: 80px;
+	color: white;
+	transition: .3s all ease-in-out;
+	font-weight: 300;
+}
+
+.link-menu:hover {
+	transform: scale(1.1);
+	height: 80px;
+	font-weight: 700;
+}
